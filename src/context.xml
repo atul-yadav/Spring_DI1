@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="First" class="com.jda.beans.Myfirst">
+<constructor-arg type="java.lang.String" value="SampleData"></constructor-arg>
+<constructor-arg type="int" value="222"></constructor-arg>
+</bean>
+
+<bean id="address" class="com.jda.beans.Address">
+		<constructor-arg value="Allahabad"></constructor-arg>
+		<constructor-arg value="UP"></constructor-arg>
+		<constructor-arg value="India"></constructor-arg>
+</bean>
+
+<bean id="employee" class="com.jda.beans.Employee">  
+<constructor-arg value="12" type="int"></constructor-arg>  
+<constructor-arg value="Atul"></constructor-arg>  
+<constructor-arg>  
+<ref bean="address"/>  
+</constructor-arg>
+</bean>
+
+<!--  
+<bean id="ans1" class="com.jda.beans.Answer">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="Java is a programming language"></constructor-arg>  
+<constructor-arg value="John"></constructor-arg>  
+</bean>  
+  
+<bean id="ans2" class="com.jda.beans.Answer">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="Java is a Platform"></constructor-arg>  
+<constructor-arg value="Ravi"></constructor-arg>  
+</bean>  
+  
+  
+
+
+<bean id="q1" class="com.jda.beans.Question1">  
+<constructor-arg value="11"></constructor-arg>  
+<constructor-arg value="What is Java?"></constructor-arg>  
+<constructor-arg>  
+<map>  
+<entry key="Java is a Programming Language"  value="Ajay Kumar"></entry>  
+<entry key="Java is a Platform" value="John Smith"></entry>  
+<entry key="Java is an Island" value="Raj Kumar"></entry>  
+</map>  
+</constructor-arg>  
+</bean>  
+-->
+
+<bean id="answer1" class="com.jda.beans.Answer">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="Java is a Programming Language"></constructor-arg>  
+<constructor-arg value="12/12/2001"></constructor-arg>  
+</bean>  
+<bean id="answer2" class="com.jda.beans.Answer">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="Java is a Platform"></constructor-arg>  
+<constructor-arg value="12/12/2003"></constructor-arg>  
+</bean>  
+  
+<bean id="user1" class="com.jda.beans.User">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="Arun Kumar"></constructor-arg>  
+<constructor-arg value="arun@gmail.com"></constructor-arg>  
+</bean>  
+<bean id="user2" class="com.jda.beans.User">  
+<constructor-arg value="2"></constructor-arg>  
+<constructor-arg value="Varun Kumar"></constructor-arg>  
+<constructor-arg value="Varun@gmail.com"></constructor-arg>  
+</bean>  
+  
+<bean id="q" class="com.jda.beans.Question1">  
+<constructor-arg value="1"></constructor-arg>  
+<constructor-arg value="What is Java?"></constructor-arg>  
+<constructor-arg>  
+<map>  
+<entry key-ref="answer1" value-ref="user1"></entry>  
+<entry key-ref="answer2" value-ref="user2"></entry>  
+</map>  
+</constructor-arg>  
+</bean>  
+
+
+<bean id="obj" class="com.jda.beans.Employee_Setter">  
+<property name="id">  
+<value>20</value>  
+</property>  
+<property name="name">  
+<value>Arun</value>  
+</property>  
+<property name="city">  
+<value>ghaziabad</value>  
+</property>  
+</bean>  
+
+
+<bean id="q_setter" class="com.jda.beans.Questions_Setter">  
+<property name="id" value="1"></property>  
+<property name="name" value="What is Java?"></property>  
+<property name="answers">  
+<list>  
+<value>Java is a programming language</value>  
+<value>Java is a platform</value>  
+<value>Java is an Island</value>  
+</list>  
+</property>  
+</bean>  
+
+
+
+
+</beans>
